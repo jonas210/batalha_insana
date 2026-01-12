@@ -7,6 +7,7 @@ def batalhar(personagem1, personagem2):
     print(personagem1)
     print(personagem2)
     print()
+    time.sleep(1)
 
     while personagem1.esta_vivo() and personagem2.esta_vivo():
         personagem1.atacar(personagem2)
@@ -20,3 +21,4 @@ def batalhar(personagem1, personagem2):
             print(f'\n {personagem1._nome} foi derrotado! {personagem2._nome} foi o vencedor.')
             break
         print()
+        time.sleep(1)
