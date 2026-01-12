@@ -1,6 +1,6 @@
-from models.guerreiro import Guerreiro
-from models.mago import Mago
+
 import time
+
 
 
 def batalhar(personagem1, personagem2):
