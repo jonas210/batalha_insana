@@ -9,11 +9,12 @@ heroi2 = definir_personagem("Jogador 2")
 while True:
     batalhar(heroi1, heroi2)
     time.sleep(1)
-    continuar = input("Quer tentar de novo?: ").lower()
+    continuar = input("\n Quer tentar de novo?: ").lower()
 
     if continuar.startswith("s") and continuar.isalpha():
         continue
 
     else:
+        time.sleep(1)
         print("Encerrando o programa")
         break
