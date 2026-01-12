@@ -1,4 +1,5 @@
 import random
+import time
 
 class Personagem:
     def __init__(self, nome, vida, ataque, defesa):
@@ -12,7 +13,8 @@ class Personagem:
         if dano < 0:
             dano = 0
         dano = random.randint(int(dano*0.8), int(dano*1.2))
-        print(f'\n {self._nome} ataca {outro._nome} e causa {dano} de dano!')
+        time.sleep(1)
+        print(f'{self._nome} ataca {outro._nome} e causa {dano} de dano!')
         outro.receber_dano(dano)
 
     def receber_dano(self, valor):
@@ -20,6 +22,7 @@ class Personagem:
         if self._vida < 0:
             self._vida = 0
         print(f"Agora, {self._nome} tem {self._vida} pontos de vida")
+        print()
 
 
     def esta_vivo(self):
