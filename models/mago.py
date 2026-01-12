@@ -10,7 +10,9 @@ class Mago(Personagem):
         dano = self._ataque - outro._defesa
         if dano < 0:
             dano = 0
+        if random.random() < 0.3:
+            dano *= 2
+            print(f'💥 Ataque crítico!')
         dano = random.randint(int(dano*0.8), int(dano*1.2))
         print(f'{self._nome} ataca {outro._nome} e causa {dano} de dano!')
-        print()
         outro.receber_dano(dano)
