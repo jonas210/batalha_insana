@@ -1,8 +1,9 @@
-from models.guerreiro import Guerreiro
-from models.mago import Mago
+
 from methods.batalha import batalhar
+from methods.nome_personagem import definir_personagem
 
-guerreiro = Guerreiro("Jonas")
-mago = Mago("Sponge")
 
-batalhar(guerreiro, mago)
+heroi1 = definir_personagem("Jogador 1")
+heroi2 = definir_personagem("Jogador 2")
+
+batalhar(heroi1, heroi2)
