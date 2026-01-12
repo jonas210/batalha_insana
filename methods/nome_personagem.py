@@ -4,7 +4,13 @@ import time
 
 def definir_personagem(jogador):
     print(f'\n Criando o heroi de {jogador}')
-    heroi = input("Digite o nome do seu heroi: ")
+    time.sleep(1)
+    while True:
+        heroi = input("Digite o nome do seu heroi: ")
+        if heroi.isalpha():
+            break
+        else:
+            print("Digite um nome válido, apenas letras sao suportadas.")
 
     while True:
         print(f'\n Escolha uma classe')
