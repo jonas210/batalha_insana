@@ -14,7 +14,7 @@ class Guerreiro(Personagem):
 
     def magia(self, outro):
         if self._mana < 5:
-            print(f'{self.nome} tentou conjurar uma magia, mas estava sem mana!')
+            print(f'{self._nome} tentou conjurar uma magia, mas estava sem mana!')
             return
 
         self._mana -= 5
