@@ -13,7 +13,6 @@ class Personagem:
     def defender(self, outro= None):
         self._defendendo = True
         print(f'{self._nome} está se defendendo!')
-        self._defesa *= 2
 
     def atacar(self, outro):
         dano = self._ataque - outro._defesa
@@ -23,11 +22,6 @@ class Personagem:
         outro.receber_dano(dano)
 
     def receber_dano(self, valor):
-        if self._defendendo:
-            valor = valor // 2
-            self._defendendo = False
-            print(f'{self._nome} defendeu parte do ataque!')
-
         self._vida -= valor
         if self._vida < 0:
             self._vida = 0
