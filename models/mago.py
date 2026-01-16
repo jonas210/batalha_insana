@@ -30,7 +30,7 @@ class Mago(Personagem):
 
     def receber_dano(self, valor):
         if self._defendendo:
-            valor = valor // 2
+            valor = int(valor * 0.2)
             self._defendendo = False
             print(f'{self._nome} criou uma barreira mágica!')
             time.sleep(1)
