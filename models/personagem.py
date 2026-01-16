@@ -10,13 +10,13 @@ class Personagem:
         self._mana = mana
         self._defendendo = False
     
-    def defender(self):
+    def defender(self, outro= None):
         self._defendendo = True
         print(f'{self._nome} está se defendendo!')
         self._defesa *= 2
 
     def atacar(self, outro):
-        dano = max(1, self._ataque - outro._defesa)
+        dano = self._ataque - outro._defesa
         dano = random.randint(int(dano*0.8), int(dano*1.2))
         time.sleep(1)
         print(f'{self._nome} ataca {outro._nome} e causa {dano} de dano!')

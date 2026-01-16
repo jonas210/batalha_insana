@@ -16,7 +16,7 @@ def opcao(personagem):
         print("Opção inválida")
 
 
-def escolha_automatica(personagem):
+def bot_opcao(personagem):
     acoes = [
         personagem.atacar,
         personagem.defender,
@@ -37,22 +37,16 @@ def batalhar(personagem1, personagem2):
     while personagem1.esta_vivo() and personagem2.esta_vivo():
     
         acao = opcao(personagem1)
-        if acao == personagem1.defender:
-            acao()
-        else:
-            acao(personagem2)
+        acao(personagem2)
 
         if not personagem2.esta_vivo():
             print(f'\n {personagem2.get_nome()} foi derrotado! {personagem1.get_nome()} foi o vencedor.')
             break
 
-        acao = escolha_automatica(personagem2)
-        if acao == personagem2.defender:
-            acao()
-        else:
-            acao(personagem1)
+        acao = bot_opcao(personagem2)
+        acao(personagem1)
 
-        time.sleep(2)
+        time.sleep(1)
         if not personagem1.esta_vivo():
             print(f'\n {personagem1.get_nome()} foi derrotado! {personagem2.get_nome()} foi o vencedor.')
             break
